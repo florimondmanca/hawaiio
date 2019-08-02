@@ -45,7 +45,12 @@ def test_sleep_must_be_positive():
         hawaiio.run(bad_sleep())
 
 
+def test_clock_outside_context():
+    with pytest.raises(RuntimeError):
+        hawaiio.time()
+
+
 def test_sleep_custom_clock():
     clock = hawaiio.testing.MockClock()
     assert hawaiio.run(sleepy(1), clock=clock) == "Hello"
-    assert hawaiio.time() == clock.time() == clock.ticks == 1
+    assert clock.time() == clock.ticks == 1

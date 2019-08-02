@@ -1,3 +1,5 @@
+from contextlib import contextmanager
+
 __all__ = ("Clock",)
 
 
@@ -8,8 +10,14 @@ class Clock:
         self._time: float = 0
 
     @classmethod
-    def set(cls, clock: "Clock"):
+    @contextmanager
+    def configure(cls, clock: "Clock"):
         cls._instance = clock
+        clock.start()
+        try:
+            yield
+        finally:
+            del cls._instance
 
     @classmethod
     def get(cls) -> "Clock":
@@ -18,7 +26,7 @@ class Clock:
         except AttributeError:
             raise RuntimeError(
                 "Clock hasn't started yet. "
-                "Are you accessing it outside an asynchronous function?"
+                "Did you try to access it outside of 'run()'?"
             )
 
     def start(self):

@@ -32,16 +32,14 @@ def run(
     if clock is None:
         clock = DEFAULT_CLOCK
 
-    Clock.set(clock)
-    clock.start()
-
-    while True:
-        try:
-            coro.send(None)
-        except StopIteration as exc:
-            return exc.value
-        else:
-            clock.tick()
+    with Clock.configure(clock):
+        while True:
+            try:
+                coro.send(None)
+            except StopIteration as exc:
+                return exc.value
+            else:
+                clock.tick()
 
 
 @types.coroutine

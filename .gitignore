@@ -19,3 +19,4 @@ var/
 *.sqlite
 *.db
 debug/
+.coverage

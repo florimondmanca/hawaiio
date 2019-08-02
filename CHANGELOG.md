@@ -4,6 +4,10 @@ All notable changes to this project are documented here. The format of this docu
 
 ## [Unreleased]
 
+### Fixed
+
+- Ensure that `hawaiio.time()` and other clock-related functions are only usable within `run()`.
+
 ## [v0.0.2] - 2019-08-03
 
 ### Added
