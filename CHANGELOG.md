@@ -4,6 +4,10 @@ All notable changes to this project are documented here. The format of this docu
 
 ## [Unreleased]
 
+### Added
+
+- `run()`
+
 ## [v0.0.1] - 2019-08-02
 
 ### Added
