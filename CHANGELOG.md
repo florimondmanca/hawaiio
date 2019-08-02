@@ -6,8 +6,9 @@ All notable changes to this project are documented here. The format of this docu
 
 ### Added
 
-- `run()`
-- `sleep()`
+- Clock system: wall time by default, `MockClock` for testing.
+- `run(coro: Awaitable[T], clock: Clock=DEFAULT_CLOCK) -> T`
+- `sleep(seconds: float)`
 
 ## [v0.0.1] - 2019-08-02
 

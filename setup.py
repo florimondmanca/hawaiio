@@ -13,7 +13,7 @@ setup(
     version="0.0.1",
     author="Florimond Manca",
     author_email="florimond.manca@gmail.com",
-    description="A library of shiny concurrency building blocks",
+    description="A library of shiny concurrency building blocks for Python",
     long_description=README,
     long_description_content_type="text/markdown",
     url="https://github.com/florimondmanca/hawaiio.git",
