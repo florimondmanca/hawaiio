@@ -30,3 +30,11 @@ def test_sleep(seconds: float):
     t = time.time()
     assert run(sleepy()) == "Hello"
     assert pytest.approx(time.time() - t, 0.1) == seconds
+
+
+def test_sleep_must_be_positive():
+    async def bad_sleep():
+        await sleep(-1)
+
+    with pytest.raises(ValueError):
+        run(bad_sleep())

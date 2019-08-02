@@ -14,7 +14,9 @@ def run(coro: typing.Coroutine[None, None, typing.T]) -> typing.T:
 
 
 @types.coroutine
-def sleep(seconds: int):
+def sleep(seconds: float):
+    if seconds < 0:
+        raise ValueError(f"'seconds' must be positive (got {seconds})")
     start = time.time()
     while time.time() - start < seconds:
         yield
