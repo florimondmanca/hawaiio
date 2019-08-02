@@ -4,8 +4,6 @@ All notable changes to this project are documented here. The format of this docu
 
 ## [Unreleased]
 
-## [v0.0.0] - 2019-08-02
-
 ### Added
 
 - Package setup.
@@ -15,5 +13,7 @@ All notable changes to this project are documented here. The format of this docu
 - Code of conduct.
 - License.
 
-[unreleased]: https://github.com/florimondmanca/thepackage/compare/v0.0.0...HEAD
-[v0.0.0]: https://github.com/florimondmanca/thepackage/compare/0a6731c515b0968a3194546144aafeb7b46a1d5f...v0.0.0
+## [v0.0.0] - 2019-08-02
+
+[unreleased]: https://github.com/florimondmanca/hawaiio/compare/v0.0.0...HEAD
+[v0.0.0]: https://github.com/florimondmanca/hawaiio/compare/f2514c9c6af0a3ed746fab64f997ec4329a769d6...v0.0.0

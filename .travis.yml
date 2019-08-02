@@ -10,7 +10,7 @@ install: pip install ".[ci]"
 
 script:
   - pytest --cov
-  - mypy thepackage
+  - mypy hawaiio
 
 after_success: codecov
 

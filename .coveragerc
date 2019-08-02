@@ -1,5 +1,5 @@
 [run]
-source=thepackage
+source=hawaiio
 
 [report]
 ignore_errors = True

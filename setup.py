@@ -9,16 +9,16 @@ REQUIREMENTS_CI = ["pytest", "pytest-cov", "codecov", "mypy"]
 REQUIREMENTS_DEV = [*REQUIREMENTS_CI, "black", "pylint", "rope", "bumpversion"]
 
 setup(
-    name="thepackage",
+    name="hawaiio",
     version="0.0.0",
     author="Florimond Manca",
     author_email="florimond.manca@gmail.com",
-    description="thedescription",
+    description="A library of shiny concurrency building blocks",
     long_description=README,
     long_description_content_type="text/markdown",
-    url="https://github.com/florimondmanca/thepackage.git",
+    url="https://github.com/florimondmanca/hawaiio.git",
     packages=find_packages(exclude=["tests*"]),
-    package_data={"thepackage": ["py.typed"]},
+    package_data={"hawaiio": ["py.typed"]},
     zip_safe=False,
     install_requires=[],
     extras_require={"dev": REQUIREMENTS_DEV, "ci": REQUIREMENTS_CI},

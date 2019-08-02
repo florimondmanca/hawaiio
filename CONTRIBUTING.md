@@ -33,11 +33,11 @@ Once tests pass locally, feel free to work on a separate branch and open a pull 
 - Black is installed along with development dependencies. We encourage you to configure your IDE to automatically run Black on file save. You can run it manually using:
 
 ```bash
-black thepackage tests
+black hawaiio tests
 ```
 
 - Static type checking is done using `mypy`. All type checks must pass for CI to succeed. You can run static type checks locally using:
 
 ```bash
-mypy thepackage
+mypy hawaiio
 ```
