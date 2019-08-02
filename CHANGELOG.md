@@ -4,6 +4,8 @@ All notable changes to this project are documented here. The format of this docu
 
 ## [Unreleased]
 
+## [v0.0.3] - 2019-08-03
+
 ### Fixed
 
 - Ensure that `hawaiio.time()` and other clock-related functions are only usable within `run()`.
@@ -29,7 +31,8 @@ All notable changes to this project are documented here. The format of this docu
 
 ## [v0.0.0] - 2019-08-02
 
-[unreleased]: https://github.com/florimondmanca/hawaiio/compare/v0.0.2...HEAD
+[unreleased]: https://github.com/florimondmanca/hawaiio/compare/v0.0.3...HEAD
+[v0.0.3]: https://github.com/florimondmanca/hawaiio/compare/v0.0.2...v0.0.3
 [v0.0.2]: https://github.com/florimondmanca/hawaiio/compare/v0.0.1...v0.0.2
 [v0.0.1]: https://github.com/florimondmanca/hawaiio/compare/v0.0.0...v0.0.1
 [v0.0.0]: https://github.com/florimondmanca/hawaiio/compare/f2514c9c6af0a3ed746fab64f997ec4329a769d6...v0.0.0
