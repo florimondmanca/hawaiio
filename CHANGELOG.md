@@ -7,6 +7,7 @@ All notable changes to this project are documented here. The format of this docu
 ### Added
 
 - `run()`
+- `sleep()`
 
 ## [v0.0.1] - 2019-08-02
 

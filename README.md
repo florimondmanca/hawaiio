@@ -16,9 +16,10 @@ pip install hawaiio
 ## Usage
 
 ```python
-from hawaiio import run
+from hawaiio import run, sleep
 
 async def greet(name: str):
+    await sleep(1)
     return f"Hello, {name}"
 
 message = run(greet("world"))
