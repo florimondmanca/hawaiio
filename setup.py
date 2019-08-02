@@ -10,7 +10,7 @@ REQUIREMENTS_DEV = [*REQUIREMENTS_CI, "black", "pylint", "rope", "bumpversion"]
 
 setup(
     name="hawaiio",
-    version="0.0.0",
+    version="0.0.1",
     author="Florimond Manca",
     author_email="florimond.manca@gmail.com",
     description="A library of shiny concurrency building blocks",
