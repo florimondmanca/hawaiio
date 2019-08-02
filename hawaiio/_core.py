@@ -1,22 +1,61 @@
-import time
+import time as ostime
 import types
 import typing
 
-__all__ = ("run", "sleep")
+from ._base import Clock
+
+__all__ = ("run", "sleep", "time")
 
 
-def run(coro: typing.Coroutine[None, None, typing.T]) -> typing.T:
+class WallClock(Clock):
+    _time: float
+
+    def start(self):
+        self._time = ostime.time()
+
+    def time(self) -> float:
+        return self._time
+
+    def to_sleep_time(self, deadline: float) -> float:
+        return deadline - self._time
+
+    def tick(self):
+        self._time = ostime.time()
+
+
+DEFAULT_CLOCK = WallClock()
+
+
+def run(
+    coro: typing.Coroutine[None, None, typing.T], clock: Clock = None
+) -> typing.T:
+    if clock is None:
+        clock = DEFAULT_CLOCK
+
+    Clock.set(clock)
+    clock.start()
+
     while True:
         try:
             coro.send(None)
         except StopIteration as exc:
             return exc.value
+        else:
+            clock.tick()
 
 
 @types.coroutine
 def sleep(seconds: float):
     if seconds < 0:
         raise ValueError(f"'seconds' must be positive (got {seconds})")
-    start = time.time()
-    while time.time() - start < seconds:
+
+    clock = Clock.get()
+    start = clock.time()
+    deadline = start + seconds
+
+    while clock.to_sleep_time(deadline) > 0:
         yield
+
+
+def time() -> float:
+    return Clock.get().time()
